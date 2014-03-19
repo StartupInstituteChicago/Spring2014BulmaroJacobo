@@ -1,5 +1,4 @@
 
-#
 development:
   adapter: mysql2
   database: db/reservester_development
@@ -18,5 +17,3 @@ test:
   password:
   pool: 5
   timeout: 5000
-
-

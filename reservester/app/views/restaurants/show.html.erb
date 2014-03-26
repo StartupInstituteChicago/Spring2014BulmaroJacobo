@@ -1,3 +1,13 @@
+   <div id="owner_nav" align="right" >
+     <% if owner_signed_in? %> Signed in as <%= current_owner.email %> <br>
+        Not you? <%= link_to "Sign out", destroy_owner_session_path, :method => :delete %>
+     <% else %>
+      <%= link_to "Sign up", new_owner_registration_path %> or <%= link_to "sign in", new_owner_session_path %>
+     <% end %>
+   </div>
+
+<h2>Restaurant</h2>
+
    <p>
       <strong>Name:</strong>
 	   <%= @restaurant.name %>
@@ -23,4 +33,4 @@
       <%= image_tag @restaurant.photo, :size => "600x500" %>
    </p>
 
-   <%= link_to 'Back', restaurants_path %> | <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+   <%= link_to 'Back', restaurants_path, class:"tiny button radius" %> | <%= link_to 'Edit', edit_restaurant_path(@restaurant), class:"tiny button radius" %>

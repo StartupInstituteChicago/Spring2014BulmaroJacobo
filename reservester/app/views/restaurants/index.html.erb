@@ -1,3 +1,11 @@
+<div id="owner_nav" align="right" >
+  <% if owner_signed_in? %> Signed in as <%= current_owner.email %> <br>
+     Not you? <%= link_to "Sign out", destroy_owner_session_path, :method => :delete %>
+  <% else %>
+   <%= link_to "Sign up", new_owner_registration_path %> or <%= link_to "sign in", new_owner_session_path %>
+  <% end %>
+</div>
+
 <h1>Restaurants Directory</h1>
 
    <table>

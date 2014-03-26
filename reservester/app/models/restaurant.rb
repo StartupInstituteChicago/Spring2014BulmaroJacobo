@@ -1,9 +1,10 @@
 class Restaurant < ActiveRecord::Base
+   validates :name, :description, :address, :phone, presence:true
+   validates :name, :address, length: { minimum: 3}
+   validates :phone, length: { minimum: 8}
 
-   validates :name, presence: true,
-					 length: { minimum: 3}
-
-   belongs_to :restaurant
+   belongs_to :owner
+   has_many :reservations
    mount_uploader :photo, PhotoUploader
-   
+
 end

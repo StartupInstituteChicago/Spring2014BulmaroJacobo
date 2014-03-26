@@ -27,12 +27,18 @@ gem 'jbuilder', '~> 1.2'
 #MySql Server
 gem 'mysql2'
 
+#PostGres SQL
+gem 'pg'
+
 #Zurb Foundation
 gem 'foundation-rails'
 
 #Imgage Uploader
 gem 'carrierwave'
 gem 'rmagick'
+
+#Login Devise System
+gem 'devise'
 
 
 group :doc do
